@@ -1,13 +1,109 @@
-body {
+/* App.css */
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.welcome-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.2), rgba(255, 255, 255, 0.2)), #0FB0FB;
+  position: relative;
+}
+
+.logo-container {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.company-logo {
+  width: 200px; /* Adjust based on logo size */
+  height: auto;
+}
+
+.company-name {
+  font-size: 1.8rem;
+  margin-top: 10px;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.company-slogan {
+  font-size: 1rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-title {
+  font-size: 2.5rem;
+  text-align: center;
+  z-index: 2;
+}
+
+.welcome-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #0FB0FB 50%, transparent 50%);
+  z-index: 1;
+  opacity: 0.3;
+}
+
+.auth-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.auth-button {
+  background-color: #0FB0FB;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.auth-button:hover {
+  background-color: #0FB0FB;
+}
+
+.auth-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #0FB0FB 50%, transparent 50%);
+  z-index: 1;
+  opacity: 0.1;
 }
